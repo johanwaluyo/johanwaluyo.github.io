@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Johan Waluyo & Eufira Khowinna - Wedding Day</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="Wedding HTML Templates" name="keywords">
+    <meta content="Wedding HTML Templates" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -24,6 +24,21 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    
+    <script>
+        // Function to play audio
+        function playAudio() {
+            // Get the audio element by ID
+            var audio = document.getElementById("myAudio");
+
+            // Play the audio
+            audio.play();
+        }
+
+        // Use window.onload to call the playAudio function when the page loads
+        window.onload = playAudio;
+    </script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -55,7 +70,11 @@
     </nav>
     <!-- Navbar End -->
 
-
+    <!-- Add this section for background music -->
+    <audio autoplay="true" loop="true" id="backgroundMusic">
+        <!-- Replace 'your-audio-file.mp3' with the path to your audio file -->
+        <source src="audio/wedding.mp3" type="audio/mp3">
+    </audio>
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5 pb-5" id="home">
@@ -524,6 +543,7 @@
     </script>
 
 
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -535,6 +555,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
 
 
 
