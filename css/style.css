@@ -9498,6 +9498,15 @@ a.text-dark:hover, a.text-dark:focus {
   animation: action 1s infinite alternate;
 }
 
+.toggleButton {
+  position: fixed;
+  text-align: center;
+  right: 100px;
+  bottom: 30px;
+  z-index: 11;
+  animation: action 1s infinite alternate;
+}
+
 @keyframes action {
   0% {
     transform: translateY(0);

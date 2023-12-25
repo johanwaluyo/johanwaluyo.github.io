@@ -25,20 +25,6 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     
-    
-    <script>
-        // Function to play audio
-        function playAudio() {
-            // Get the audio element by ID
-            var audio = document.getElementById("myAudio");
-
-            // Play the audio
-            audio.play();
-        }
-
-        // Use window.onload to call the playAudio function when the page loads
-        window.onload = playAudio;
-    </script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -70,12 +56,11 @@
     </nav>
     <!-- Navbar End -->
 
+    
     <!-- Add this section for background music -->
-    <audio autoplay="true" loop="true" id="backgroundMusic">
-        <!-- Replace 'your-audio-file.mp3' with the path to your audio file -->
-        <source src="audio/wedding.mp3" type="audio/mp3">
+    <audio id="backgroundMusic" src="audio/wedding.mp3" controls autoplay loop style="display: none;" >
     </audio>
-
+    
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5 pb-5" id="home">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -383,6 +368,9 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    
+    <!-- Play song -->
+    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square toggleButton"><i class="fa fa-play"></i></a>
 
 
 
@@ -557,7 +545,25 @@
     <script src="js/main.js"></script>
 
 
+    <script>
+        // Reference to the audio element
+        var backgroundMusic = document.getElementById("backgroundMusic");
 
+        // Reference to the play/pause button
+        var toggleButton = document.querySelector(".toggleButton");
+
+        // Toggle play/pause when the button is clicked
+        toggleButton.addEventListener("click", function () {
+            if (backgroundMusic.paused) {
+                backgroundMusic.volume = 0.3;
+                backgroundMusic.play();
+                toggleButton.innerHTML = '<i class="fa fa-pause"></i>';
+            } else {
+                backgroundMusic.pause();
+                toggleButton.innerHTML = '<i class="fa fa-play"></i>';
+            }
+        });
+    </script>
 
 </body>
 
