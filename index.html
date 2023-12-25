@@ -273,8 +273,8 @@
             <div class="row">
                 <div class="col-12 text-center mb-2">
                     <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".first">Groomsmen</li>
-                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".second">Bridesmaid</li>
+                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".first">Groom Family</li>
+                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".second">Bride Family</li>
                     </ul>
                 </div>
             </div>
@@ -297,18 +297,18 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="text-center">
-                        <form>
+                        <form method="post" action="" name="contact-form">
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Name"/>
+                                    <input type="text" name="your-name" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Name"/>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Email"/>
+                                    <input type="email" name="your-email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Email"/>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;">
+                                    <select class="form-control bg-secondary border-0" style="height: 52px;"  name="no-guest">
                                         <option>Number of Guest</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -317,7 +317,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;">
+                                    <select class="form-control bg-secondary border-0" style="height: 52px;" name="attending">
                                         <option>I'm Attending</option>
                                         <option>All Events</option>
                                         <option>Wedding Party</option>
@@ -325,7 +325,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Message" required="required"></textarea>
+                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Message" name="message" required="required"></textarea>
                             </div>
                             <div>
                                 <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Submit</button>
@@ -563,6 +563,22 @@
                 toggleButton.innerHTML = '<i class="fa fa-play"></i>';
             }
         });
+    </script>
+
+    <!-- Process submit reservation -->
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxLqnCNmKvxNUE9S9RF6P4saQz8DKHzaRCd7Ij2GbyzzXBK7KJTFaRQCMWL8Zj_3p7R5A/exec'
+
+    const form = document.forms['contact-form']
+
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => alert("Thank you! your reservation have been sent." ))
+    .then(() => { window.location.reload(); })
+    .catch(error => console.error('Error!', error.message))
+    })
+
     </script>
 
 </body>
