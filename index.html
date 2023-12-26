@@ -27,6 +27,13 @@
     <link href="css/message.css" rel="stylesheet">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- Loading datatables, a JS library from the CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js">
+    </script>
+
     
 </head>
 
@@ -682,8 +689,8 @@
 
     <!-- Process submit reservation -->
     <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxLqnCNmKvxNUE9S9RF6P4saQz8DKHzaRCd7Ij2GbyzzXBK7KJTFaRQCMWL8Zj_3p7R5A/exec'
-
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx-VOTgJ-X0Q23W3cqkf4gYiBK2c42rpfEiamLA-ijt3nh-hHNL_qQwvFM-wUu6muwpSA/exec'
+    //https://script.google.com/macros/s/AKfycbxLqnCNmKvxNUE9S9RF6P4saQz8DKHzaRCd7Ij2GbyzzXBK7KJTFaRQCMWL8Zj_3p7R5A/exec
     const form = document.forms['contact-form']
 
     form.addEventListener('submit', e => {
@@ -694,6 +701,29 @@
     .catch(error => console.error('Error!', error.message))
     })
 
+    </script>
+
+    <!-- Include the Google API script -->
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <script>
+        // Wait for the DOM to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+        // Call the server-side function when the DOM is ready
+        google.script.run.withSuccessHandler(showData).getData();
+        // var location = new google.script.url.getLocation();
+        // new google.script.run.withSuccessHandler(showData).withFailureHandler(onFailure).withUserObject(location).getData();
+        });
+
+        // Callback function to handle successful response
+        function showData(data) {
+        console.log('Data from server:', data);
+        }
+
+        // Callback function to handle failure
+        function onFailure(error) {
+        console.error('Error:', error);
+        }
     </script>
 
 </body>
