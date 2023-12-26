@@ -51,9 +51,9 @@
             </a>
             <div class="navbar-nav mr-auto py-0">
                 <a href="#family" class="nav-item nav-link">Family</a>
-                <a href="#event" class="nav-item nav-link">Event</a>
+                <a href="#event" class="nav-item nav-link">Events</a>
                 <a href="#rsvp" class="nav-item nav-link">RSVP</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
+                <a href="#wish" class="nav-item nav-link">Wish</a>
             </div>
         </div>
     </nav>
@@ -342,16 +342,29 @@
     <!-- RSVP End -->
 
 
-    <!-- Leave Message Start -->
-    <div class="slide-container swiper">
-        <div class="slide-content">
-            <div class="card-wrapper swiper-wrapper" id="cardWrapper"></div>
+    <!-- Bless Message Start -->
+    <div class="container-fluid py-5" id="wish">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Wishes</h6>
+                <h1 class="font-secondary display-4">Bless From Relatives/Friends</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="slide-container swiper">
+                        <div class="slide-content">
+                            <div class="card-wrapper swiper-wrapper" id="cardWrapper"></div>
+                        </div>
+                        <div class="swiper-button-next swiper-navBtn"></div>
+                        <div class="swiper-button-prev swiper-navBtn"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="swiper-button-next swiper-navBtn"></div>
-        <div class="swiper-button-prev swiper-navBtn"></div>
-        <div class="swiper-pagination"></div>
     </div>
-    <!-- Leave Message End -->
+    <!-- Bless Message End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
@@ -392,12 +405,22 @@
     <script>
         // Assuming 'familyMembers' is an array containing family member data
         const familyMembers = [
-            { type: "first", name: "Joni Hon", role: "Groom Father", image: "img/groomsmen-1.jpg" },
-            { type: "second", name: "Full Name", role: "Bridesmaid Father", image: "img/bridesmaid-1.jpg" },
-            { type: "first", name: "Di Hua", role: "Groom Mother", image: "img/groomsmen-2.jpg" },
-            { type: "second", name: "Full Name", role: "Bridesmaid Mother", image: "img/bridesmaid-2.jpg" },
-            { type: "first", name: "Joko Waluyo", role: "Groom Brother", image: "img/groomsmen-3.jpg" },
-            { type: "second", name: "Full Name", role: "Bridesmaid Brother", image: "img/bridesmaid-3.jpg" }
+            { type: "first", name: "Joni Hon", role: "Groom's Father", image: "img/groomsmen-1.jpg" },
+            { type: "first", name: "Di Hua", role: "Groom's Mother", image: "img/groomsmen-2.jpg" },
+            { type: "first", name: "Joko Waluyo", role: "Groom's Brother", image: "img/groomsmen-3.jpg" },
+            { type: "first", name: "Susanti", role: "Groom's Sister-in-law", image: "img/groomsmen-2.jpg" },
+            { type: "first", name: "Ludvig", role: "Groom's Nephew", image: "img/groomsmen-3.jpg" },
+            { type: "first", name: "Ludwis", role: "Groom's Nephew", image: "img/groomsmen-3.jpg" },
+            { type: "first", name: "Jono Waluyo", role: "Groom's Brother", image: "img/groomsmen-3.jpg" },
+            { type: "first", name: "sister-in-law", role: "Groom's Sister-in-law", image: "img/groomsmen-2.jpg" },
+            { type: "first", name: "Amelia Ferawati", role: "Groom's Sister", image: "img/groomsmen-3.jpg" },
+            { type: "second", name: "Full Name", role: "Bride's Mother", image: "img/bridesmaid-2.jpg" },
+            { type: "second", name: "Full Name", role: "Bride's Father", image: "img/bridesmaid-3.jpg" },
+            { type: "second", name: "Full Name", role: "Bride's Sister", image: "img/bridesmaid-1.jpg" },
+            { type: "second", name: "Full Name", role: "Bride's Brother-in-law", image: "img/bridesmaid-3.jpg" },
+            { type: "second", name: "Full Name", role: "Bride's Niece", image: "img/bridesmaid-1.jpg" },
+            { type: "second", name: "Full Name", role: "Bride's Nephew", image: "img/bridesmaid-3.jpg" },
+            { type: "second", name: "Full Name", role: "Bride's Brother", image: "img/bridesmaid-3.jpg" }
         ];
 
         // Get the container
@@ -544,34 +567,34 @@
         }
     </script>
 
-    <!-- Leave Message Start -->
+    <!-- Bless Message Start -->
     <script>
         // Array of card data
         const cardData = [
             {
-                imageSrc: "img/gallery-1.jpg",
+                imageSrc: "img/wed-1.jpg",
                 name: "Johan Waluyo",
-                description: "Happy Marriage",
+                description: "Marriage is a union, where two individuals take vows to lead a happy life together.",
             },
             {
-                imageSrc: "img/gallery-2.jpg",
+                imageSrc: "img/wed-2.jpg",
                 name: "David Dell",
-                description: "The lorem text for the second card...",
+                description: "We're so happy for you! Here's to a long and happy marriage!",
             },
             {
-                imageSrc: "img/gallery-2.jpg",
-                name: "David Dell",
-                description: "The lorem text for the second card...",
+                imageSrc: "img/wed-3.jpg",
+                name: "John Mark",
+                description: "As long as your wedding congratulations message is heartfelt and offers the happy couple a positive wish for their marriage",
             },
             {
-                imageSrc: "img/gallery-2.jpg",
-                name: "David Dell",
-                description: "The lorem text for the second card...",
+                imageSrc: "img/wed-4.jpg",
+                name: "Mark Well",
+                description: "Congrats my dear on your wedding. May you both stay in love forever and wishing you a happy married life in the future!",
             },
             {
-                imageSrc: "img/gallery-2.jpg",
-                name: "David Dell",
-                description: "The lorem text for the second card...",
+                imageSrc: "img/wed-5.jpg",
+                name: "Jaboc Tai",
+                description: "May the love and happiness surround you forever, may you feel today's shine through the years. Wishing you the heartiest joy on your wedding day",
             },
             // Add more card data objects as needed
         ];
@@ -610,7 +633,7 @@
         window.onload = createCards;
                
     </script>
-    <!-- Leave Message End -->
+    <!-- Bless Message End -->
 
 
     <!-- JavaScript Libraries -->
