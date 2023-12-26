@@ -24,6 +24,9 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/message.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     
 </head>
 
@@ -339,6 +342,17 @@
     <!-- RSVP End -->
 
 
+    <!-- Leave Message Start -->
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper" id="cardWrapper"></div>
+        </div>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- Leave Message End -->
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
         <div class="container text-center py-5">
@@ -530,6 +544,73 @@
         }
     </script>
 
+    <!-- Leave Message Start -->
+    <script>
+        // Array of card data
+        const cardData = [
+            {
+                imageSrc: "img/gallery-1.jpg",
+                name: "Johan Waluyo",
+                description: "Happy Marriage",
+            },
+            {
+                imageSrc: "img/gallery-2.jpg",
+                name: "David Dell",
+                description: "The lorem text for the second card...",
+            },
+            {
+                imageSrc: "img/gallery-2.jpg",
+                name: "David Dell",
+                description: "The lorem text for the second card...",
+            },
+            {
+                imageSrc: "img/gallery-2.jpg",
+                name: "David Dell",
+                description: "The lorem text for the second card...",
+            },
+            {
+                imageSrc: "img/gallery-2.jpg",
+                name: "David Dell",
+                description: "The lorem text for the second card...",
+            },
+            // Add more card data objects as needed
+        ];
+
+        // Function to create card elements and append them to the card wrapper
+        function createCards() {
+            // Get the card wrapper element by its ID
+            const cardWrapper = document.getElementById('cardWrapper');
+
+            // Loop through the card data and create card elements
+            cardData.forEach(data => {
+                // Create card container
+                const cardContainer = document.createElement('div');
+                cardContainer.classList.add('card', 'swiper-slide');
+
+                // Create image content
+                const imageContent = document.createElement('div');
+                imageContent.classList.add('image-content');
+                imageContent.innerHTML = `<span class="overlay"></span><div class="card-image"><img src="${data.imageSrc}" alt="" class="card-img"></div>`;
+
+                // Create card content
+                const cardContent = document.createElement('div');
+                cardContent.classList.add('card-content');
+                cardContent.innerHTML = `<h2 class="name">${data.name}</h2><p class="description">${data.description}</p>`;
+
+                // Append image content and card content to card container
+                cardContainer.appendChild(imageContent);
+                cardContainer.appendChild(cardContent);
+
+                // Append card container to card wrapper
+                cardWrapper.appendChild(cardContainer);
+            });
+        }
+
+        // Call the function when the window has finished loading
+        window.onload = createCards;
+               
+    </script>
+    <!-- Leave Message End -->
 
 
     <!-- JavaScript Libraries -->
@@ -543,6 +624,11 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 
 
     <script>
