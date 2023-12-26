@@ -654,7 +654,7 @@
         fetch(sheetsuEndpoint)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                //console.log(data);
                 // Process the data as needed
                 cardData = data.map(item => ({
                     "name": item["your-name"],
@@ -663,7 +663,8 @@
                 }));
 
                 // Use slice to get the last 10 items
-                cardData.slice(-10);
+                cardData = cardData.slice(-10);
+                console.log(cardData);
 
                 // Call the function to create cards after fetching data
                 createCards();
