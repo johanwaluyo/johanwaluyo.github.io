@@ -661,7 +661,9 @@
                     "imageSrc": `img/wed-${getRandomInt(1, 6)}.jpg`,
                     "message": item["message"]
                 }));
-                console.log(cardData);
+
+                // Use slice to get the last 10 items
+                cardData.slice(-10);
 
                 // Call the function to create cards after fetching data
                 createCards();
