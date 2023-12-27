@@ -314,14 +314,15 @@
                                     <input type="text" name="your-name" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Name"/>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <input type="email" name="your-email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Email"/>
+                                    <input type="email" name="your-email" id="emailInput" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Email"/>
+                                    <p id="emailError" class="text-primary"></p>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
                                     <select class="form-control bg-secondary border-0" style="height: 52px;"  name="no-guest">
                                         <option>Number of Guest</option>
-                                        <option>None</option>
+                                        <option>0</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -333,7 +334,7 @@
                                         <option>All Events</option>
                                         <option>Wedding Reception</option>
                                         <option>Wedding Party</option>
-                                        <option>None</option>
+                                        <option>No Attend</option>
                                     </select>
                                 </div>
                             </div>
@@ -797,11 +798,14 @@
     const form = document.forms['contact-form']
 
     form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => alert("Thank you! your reservation have been sent." ))
-    .then(() => { window.location.reload(); })
-    .catch(error => console.error('Error!', error.message))
+        e.preventDefault()
+        // Validate email
+        if (validateEmail()) {
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thank you! your reservation have been sent." ))
+            .then(() => { window.location.reload(); })
+            .catch(error => console.error('Error!', error.message));
+        }
     })
 
     </script>
@@ -927,6 +931,32 @@
         window.onload = showWelcomePopup;
     </script>
     <!-- Welcome Popup Message End -->
+
+    <!-- Validation Start -->
+    <script>
+        function validateEmail() {
+            // Get the email input value
+            var emailInput = document.getElementById("emailInput").value;
+    
+            // Regular expression for basic email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+            // Check if the email is valid
+            if (emailRegex.test(emailInput)) {
+                // Clear any previous error message
+                document.getElementById("emailError").textContent = "";
+    
+                return true; // Return true if validation passes
+                // Proceed with your logic or form submission
+                // For example, you can send the email using AJAX or perform any other action
+            } else {
+                // Display an error message in red
+                document.getElementById("emailError").textContent = "Invalid email address";
+                return false; // Return false if validation fails
+            }
+        }
+    </script>
+    <!-- Validation End -->
 
 
 </body>
