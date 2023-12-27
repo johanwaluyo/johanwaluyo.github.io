@@ -9784,6 +9784,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 /* Apply the blinking animation to the text */
 .blinking-text {
-  animation: blink 2s infinite; /* 1s duration, infinite loop */
+  animation: blink 3s infinite; /* 1s duration, infinite loop */
   color: var(--primary);
 }

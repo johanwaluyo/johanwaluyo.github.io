@@ -1,6 +1,35 @@
 /* Google Fonts - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #e83e8c;
+  --secondary: #EDF5F7;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #FFFFFF;
+  --dark: #121F38;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Montserrat", sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 
 .slide-container{
   max-width: 1120px;
@@ -34,7 +63,7 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #e83e8c;
+  background-color: var(--primary);
   border-radius: 25px 25px 0 25px;
 }
 .overlay::before,
@@ -45,7 +74,7 @@
   bottom: -40px;
   height: 40px;
   width: 40px;
-  background-color: #e83e8c;
+  background-color: var(--primary);
 }
 .overlay::after{
   border-radius: 0 25px 0 0;
@@ -64,39 +93,41 @@
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #e83e8c;
+  border: 4px solid var(--primary);
 }
 .name{
   font-size: 18px;
-  font-weight: 500;
-  color: #333;
+  font-weight: bold;
+  text-decoration: underline;
+  color:  var(--red);
 }
 .description{
   font-size: 14px;
-  color: #707070;
   text-align: center;
+  font-weight: bold;
+  color:  var(--red);
 }
 .button{
   border: none;
   font-size: 16px;
   color: #FFF;
   padding: 8px 16px;
-  background-color: #e83e8c;
+  background-color: var(--primary);
   border-radius: 6px;
   margin: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .button:hover{
-  background: #265DF2;
+  background: var(--pink);
 }
 
 .swiper-navBtn{
-  color: #6E93f7;
+  color: var(--red);
   transition: color 0.3s ease;
 }
 .swiper-navBtn:hover{
-  color: #e83e8c;
+  color: var(--primary);
 }
 .swiper-navBtn::before,
 .swiper-navBtn::after{
@@ -109,11 +140,11 @@
   left: 0;
 }
 .swiper-pagination-bullet{
-  background-color: #6E93f7;
+  background-color: var(--red);
   opacity: 1;
 }
 .swiper-pagination-bullet-active{
-  background-color: #e83e8c;
+  background-color: var(--primary);
 }
 
 @media screen and (max-width: 768px) {
