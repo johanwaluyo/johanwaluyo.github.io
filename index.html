@@ -547,8 +547,22 @@
 
     <!-- Welcome Popup -->
     <div id="welcomePopup">
-        <p id="welcomeMessage">Welcome, <span id="namePlaceholder"></span>!</p>
-        <button onclick="closePopup()">Close</button>
+        
+        <div class="section-title position-relative text-center">
+            
+            <button onclick="closePopup()" class="btn btn-lg btn-outline-primary btn-lg-square"><i class="far fa-heart"></i></button>
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;"><span id="namePlaceholder"></span></h6>
+            
+            <i class="far fa-heart text-dark"></i>
+            <h1 class="font-secondary display-4">Welcome</h1>
+            <h1 class="font-secondary display-4">to our</h1>
+            <h1 class="font-secondary display-4">Wedding Ceremony</h1>
+            <h1 class="font-secondary display-4">Johan Waluyo & Eufira Knowinna</h1>
+            <h1 class="font-secondary display-4">22 September 2024</h1>
+            <i class="far fa-heart text-dark"></i>
+            <br>
+        </div>
+
     </div>
 
 
@@ -875,7 +889,7 @@
             document.getElementById('welcomePopup').style.display = 'block';
       
             // Automatically close the popup after 3 seconds
-            setTimeout(closePopup, 3000);
+            setTimeout(closePopup, 5000);
           }
         }
       
