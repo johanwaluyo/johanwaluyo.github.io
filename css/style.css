@@ -9770,4 +9770,7 @@ a.text-dark:hover, a.text-dark:focus {
   #event .border-right {
     border-right: none !important;
   }
+  #ewallet .border-right {
+    border-right: none !important;
+  }
 }
