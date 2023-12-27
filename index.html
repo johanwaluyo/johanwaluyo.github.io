@@ -629,14 +629,17 @@
 
     <!-- Loop dynamicCarousel Javascript -->
     <script>
-        // Assuming 'imgPaths' is an array containing the paths to your carousel images
-        const imgPaths1 = [
-            "img/carousel-1.jpg",
-            "img/carousel-2.jpg",
-            "img/carousel-3.jpg",
-            "img/carousel-4.jpg",
-            "img/carousel-5.jpg"
-        ];
+        // Declare variables at the top
+        const imgPaths1 = [];
+        let totalCarousel = 5; // Set the total number of carousel images
+
+        // Use variables in the rest of your script
+        for (let i = 1; i <= totalCarousel; i++) {
+            const imagePath = `img/carousel-${i}.jpg`;
+            imgPaths1.push(imagePath);
+        }
+
+        console.log(imgPaths1);
     
         // Get the container
         const carouselContainer = document.getElementById("dynamicCarousel");
@@ -697,19 +700,16 @@
     <!-- Loop gallery Javascript -->
     <script>
         // Assuming 'imgPaths' is an array containing the paths to your images
-        const imgPaths2 = [
-            "img/gallery-1.jpg",
-            "img/gallery-2.jpg",
-            "img/gallery-3.jpg",
-            "img/gallery-4.jpg",
-            "img/gallery-5.jpg",
-            "img/gallery-6.jpg",
-            "img/gallery-7.jpg",
-            "img/gallery-8.jpg",
-            "img/gallery-9.jpg",
-            "img/gallery-10.jpg",
-            "img/gallery-11.jpg"
-        ];
+        const imgPaths2 = [];
+        let totalGallery = 11; // Set the total number of images
+
+        for (let i = 1; i <= totalGallery; i++) {
+            const imagePath = `img/gallery-${i}.jpg`;
+            imgPaths2.push(imagePath);
+        }
+        
+        // Log the resulting image paths
+        console.log(imgPaths2);
     
         // Get the container
         const galleryContainer = document.getElementById("dynamicGallery");
