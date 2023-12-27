@@ -800,12 +800,12 @@
     form.addEventListener('submit', e => {
         e.preventDefault()
         // Validate email
-        if (validateEmail()) {
+        //if (validateEmail()) {
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => alert("Thank you! your reservation have been sent." ))
             .then(() => { window.location.reload(); })
             .catch(error => console.error('Error!', error.message));
-        }
+        //}
     })
 
     </script>
