@@ -847,6 +847,42 @@
     </script>
     <!-- Bless Message End -->
 
+    
+    <!-- Welcome Popup Message Start -->
+    <script>
+        // Function to get URL parameters
+        function getParameterByName(name, url) {
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, '\\$&');
+          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+      
+        // Function to display the welcome popup
+        function showWelcomePopup() {
+          var name = getParameterByName('name');
+          if (name) {
+            document.getElementById('namePlaceholder').textContent = name;
+            document.getElementById('welcomePopup').style.display = 'block';
+      
+            // Automatically close the popup after 3 seconds
+            setTimeout(closePopup, 3000);
+          }
+        }
+      
+        // Function to close the popup
+        function closePopup() {
+          document.getElementById('welcomePopup').style.display = 'none';
+        }
+      
+        // Call the function when the window has finished loading
+        window.onload = showWelcomePopup;
+    </script>
+    <!-- Welcome Popup Message End -->
+
 
 </body>
 
