@@ -761,21 +761,33 @@
     <script>
         // Reference to the audio element
         var backgroundMusic = document.getElementById("backgroundMusic");
-
+    
         // Reference to the play/pause button
         var toggleButton = document.querySelector(".toggleButton");
-
-        // Toggle play/pause when the button is clicked
         toggleButton.addEventListener("click", function () {
-            if (backgroundMusic.paused) {
-                backgroundMusic.volume = 0.3;
-                backgroundMusic.play();
-                toggleButton.innerHTML = '<i class="fa fa-pause"></i>';
-            } else {
-                backgroundMusic.pause();
-                toggleButton.innerHTML = '<i class="fa fa-play"></i>';
-            }
+            toggleMusic();
         });
+        // Function to toggle play/pause
+        function toggleMusic() {
+            if (backgroundMusic.paused) {
+                playMusic();
+            } else {
+                pauseMusic();
+            }
+        }
+    
+        // Function to play the music
+        function playMusic() {
+            backgroundMusic.volume = 0.3;
+            backgroundMusic.play();
+            toggleButton.innerHTML = '<i class="fa fa-pause"></i>';
+        }
+    
+        // Function to pause the music
+        function pauseMusic() {
+            backgroundMusic.pause();
+            toggleButton.innerHTML = '<i class="fa fa-play"></i>';
+        }
     </script>
 
     <!-- Process submit reservation -->
@@ -881,37 +893,34 @@
           if (!results[2]) return '';
           return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
-      
         // Function to display the welcome popup
         function showWelcomePopup() {
           var name = getParameterByName('name');
           if (name) {
             document.getElementById('namePlaceholder').textContent = name;
             document.getElementById('welcomePopup').style.display = 'block';
-      
             // Automatically close the popup after 8 seconds
             //setTimeout(closePopup, 8000);
 
           }
         }
 
+        let count = 0;
         // Add event listener to close the welcome popup when clicking outside
         document.addEventListener('click', function (e) {
-            if (!document.getElementById('welcomePopup').contains(e.target)) {
-                closePopup();
-            }
+            if(count==0){ // only once
+                if (!document.getElementById('welcomePopup').contains(e.target)) {
+                    closePopup();
+                }
+            }            
         });
+        
       
         // Function to close the popup
         function closePopup() {
+            count++;
             document.getElementById('welcomePopup').style.display = 'none';
-          
-            // Reference to the audio element
-            var backgroundMusic = document.getElementById("backgroundMusic");
-            //play music
-            backgroundMusic.volume = 0.5;
-            backgroundMusic.play();
-            toggleButton.innerHTML = '<i class="fa fa-pause"></i>';
+            toggleMusic();
         }
       
         // Call the function when the window has finished loading
