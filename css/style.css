@@ -9774,3 +9774,16 @@ a.text-dark:hover, a.text-dark:focus {
     border-right: none !important;
   }
 }
+
+/* Define the blinking animation */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Apply the blinking animation to the text */
+.blinking-text {
+  animation: blink 2s infinite; /* 1s duration, infinite loop */
+  color: var(--primary);
+}
