@@ -70,7 +70,7 @@
 
     
     <!-- Add this section for background music -->
-    <audio id="backgroundMusic" src="audio/wedding.mp3" controls autoplay loop style="display: none;" >
+    <audio id="backgroundMusic" src="audio/wedding.mp3" controls loop style="display: none;" >
     </audio>
     
     <!-- Carousel Start -->
@@ -889,14 +889,29 @@
             document.getElementById('namePlaceholder').textContent = name;
             document.getElementById('welcomePopup').style.display = 'block';
       
-            // Automatically close the popup after 3 seconds
-            setTimeout(closePopup, 8000);
+            // Automatically close the popup after 8 seconds
+            //setTimeout(closePopup, 8000);
+
           }
         }
+
+        // Add event listener to close the welcome popup when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!document.getElementById('welcomePopup').contains(e.target)) {
+                closePopup();
+            }
+        });
       
         // Function to close the popup
         function closePopup() {
-          document.getElementById('welcomePopup').style.display = 'none';
+            document.getElementById('welcomePopup').style.display = 'none';
+          
+            // Reference to the audio element
+            var backgroundMusic = document.getElementById("backgroundMusic");
+            //play music
+            backgroundMusic.volume = 0.5;
+            backgroundMusic.play();
+            toggleButton.innerHTML = '<i class="fa fa-pause"></i>';
         }
       
         // Call the function when the window has finished loading
