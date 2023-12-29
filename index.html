@@ -703,11 +703,12 @@
 
         // Use variables in the rest of your script
         for (let i = 1; i <= totalCarousel; i++) {
-            const imagePath = `img/carousel-${i}.jpg`;
+            const imagePath = `img/carousel/carousel-${i}.jpg`;
             imgPaths1.push(imagePath);
         }
 
         console.log(imgPaths1);
+        
     
         // Get the container
         const carouselContainer = document.getElementById("dynamicCarousel");
@@ -772,7 +773,7 @@
         let totalGallery = 11; // Set the total number of images
 
         for (let i = 1; i <= totalGallery; i++) {
-            const imagePath = `img/gallery-${i}.jpg`;
+            const imagePath = `img/gallery/gallery-${i}.jpg`;
             imgPaths2.push(imagePath);
         }
         
@@ -900,7 +901,7 @@
                 // Process the data as needed
                 cardData = data.map(item => ({
                     "name": item["your-name"],
-                    "imageSrc": `img/wed-${getRandomInt(1, 6)}.jpg`,
+                    "imageSrc": `img/wed/wed-${getRandomInt(1, 6)}.jpg`,
                     "message": item["message"]
                 }));
 
