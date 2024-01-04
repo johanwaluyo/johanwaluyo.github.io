@@ -74,7 +74,7 @@
 
     
     <!-- Add this section for background music -->
-    <audio id="backgroundMusic" src="audio/wedding-2.mp3" controls loop style="display: none;" >
+    <audio id="backgroundMusic" src="audio/wedding-chineseold.mp3" controls loop style="display: none;" >
     </audio>
     
     <!-- Carousel Start -->
@@ -1101,6 +1101,38 @@
         }
     </script>
     <!-- Copy Hash Tag -->
+
+
+    <!-- wedding song type Start -->
+    <script>
+        // Get the type parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type');
+    
+        // Define the map of audio sources
+        const audioMap = {
+            '11': 'audio/wedding-chinese.mp3',
+            '12': 'audio/wedding-chineseold.mp3',
+            '21': 'audio/wedding-english.mp3',
+            '22': 'audio/wedding-englishold.mp3',
+            '31': 'audio/wedding-indo.mp3',
+            '88': 'audio/wedding-viet.mp3'
+        };
+        
+    
+        // Get the audio source based on the type parameter
+        const audioSource = audioMap[type];
+    
+        // Set the audio source dynamically
+        const audioElement = document.getElementById('backgroundMusic');
+        if (audioSource) {
+            audioElement.src = audioSource;
+            audioElement.load();
+        } else {
+            console.error('Invalid type parameter or audio source not found.');
+        }
+    </script>
+    <!-- wedding song type End -->
 
 </body>
 
