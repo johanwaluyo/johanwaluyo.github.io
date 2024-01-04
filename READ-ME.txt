@@ -9,3 +9,20 @@
   =>  Author Website   : https://htmlcodex.com
 
   =>  About HTML Codex : HTML Codex is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://htmlcodex.com/about-us )
+
+
+
+  => Johan Notes for wedding website
+  #1 Name for invite ?name=....
+  #2 List of Music type &type=...
+    '11': 'audio/wedding-chinese.mp3',
+    '12': 'audio/wedding-chineseold.mp3',
+    '21': 'audio/wedding-english.mp3',
+    '22': 'audio/wedding-englishold.mp3',
+    '31': 'audio/wedding-indo.mp3',
+    '88': 'audio/wedding-viet.mp3'
+  #3 example url
+    https://www.johanwedseufira.online/?name=Johan%20Waluyo&type=11
+  #4 totalCarousel need to set as how many Carousel will have
+  #5 totalGallery need to set as how many Gallery will have
+  #6 need to modify pinterest https://www.pinterest.com/evengarnet2000/johanwedseufira2024/
