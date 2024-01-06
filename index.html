@@ -40,6 +40,13 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+    <!-- Loading page -->
+    <div id="loading-overlay">
+        <div id="loading-indicator"></div>
+    </div>
+     <!-- Loading page -->
+
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
@@ -1135,6 +1142,15 @@
         }
     </script>
     <!-- wedding song type End -->
+
+    <!-- Loading page begore show -->
+    <script>
+        window.addEventListener('load', function () {
+            // Page has fully loaded, remove the loading overlay
+            document.getElementById('loading-overlay').style.display = 'none';
+        });
+    </script>
+    <!-- Loading page begore show -->
 
 </body>
 
