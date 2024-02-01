@@ -386,42 +386,45 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
                     <h5 class="font-weight-normal text-muted mb-3 pb-3">For all the best wishes</h5>
+                    <h4 class="font-weight-normal text-muted mb-3 pb-3">Press Button to show/hide E-Wallet <button onclick="toggleCollapsible()" class="btn btn-lg btn-outline-primary btn-lg-square"><i class="fas fa-wallet"></i></button></h5>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 border-right border-primary">
-                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                        <a download="johan-maybank.jpg" href="img/ewallet-1.jpg" title="johan-maybank" target="_blank">
-                            <img class="img-fluid rounded" style="width: 50%; height: 50%;" src="img/ewallet-1.jpg" alt="">
-                        </a>
-                        <h4 class="mb-3">Maybank</h4>
-                        <p class="mb-2">Account no : 1142 5423 5994</p>
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-6 border-right border-primary">
+                        <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+                            <a download="johan-maybank.jpg" href="img/ewallet-1.jpg" title="johan-maybank" target="_blank">
+                                <img class="img-fluid rounded" style="width: 50%; height: 50%;" src="img/ewallet-1.jpg" alt="">
+                            </a>
+                            <h4 class="mb-3">Maybank</h4>
+                            <p class="mb-2">Account no : 1142 5423 5994</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-center text-md-left ml-md-3">
+                            <a download="johan-tng.jpg" href="img/ewallet-2.jpg" title="johan-tng" target="_blank">
+                                <img class="img-fluid rounded" style="width: 50%; height: 50%;" src="img/ewallet-2.jpg" alt="">
+                            </a>
+                            <h4 class="mb-3">TnG</h4>
+                            <p class="mb-2">Duitnow Id : 1814 3785 6878</p>
+                            <p class="mb-2">Mobile No : 011 3603 5247</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="text-center text-md-left ml-md-3">
-                        <a download="johan-tng.jpg" href="img/ewallet-2.jpg" title="johan-tng" target="_blank">
-                            <img class="img-fluid rounded" style="width: 50%; height: 50%;" src="img/ewallet-2.jpg" alt="">
-                        </a>
-                        <h4 class="mb-3">TnG</h4>
-                        <p class="mb-2">Duitnow Id : 1814 3785 6878</p>
-                        <p class="mb-2">Mobile No : 011 3603 5247</p>
+                <div class="row">
+                    <div class="col-md-6 border-right border-primary">
+                        <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+                            <img class="img-fluid rounded" style="width: 100px; height: 100px;" src="img/ewallet-3.png" alt="">
+                            <h4 class="mb-3">BCA</h4>
+                            <p class="mb-2">Account no : 527 107 2792</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 border-right border-primary">
-                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                        <img class="img-fluid rounded" style="width: 100px; height: 100px;" src="img/ewallet-3.png" alt="">
-                        <h4 class="mb-3">BCA</h4>
-                        <p class="mb-2">Account no : 527 107 2792</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="text-center text-md-left ml-md-3">
-                        <img class="img-fluid rounded" style="width: 150px; height: 100px;" src="img/ewallet-4.jpg" alt="">
-                        <h4 class="mb-3">GoPay</h4>
-                        <p class="mb-2">Virtual Account : 70001085668103968</p>
+                    <div class="col-md-6">
+                        <div class="text-center text-md-left ml-md-3">
+                            <img class="img-fluid rounded" style="width: 150px; height: 100px;" src="img/ewallet-4.jpg" alt="">
+                            <h4 class="mb-3">GoPay</h4>
+                            <p class="mb-2">Virtual Account : 70001085668103968</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1143,14 +1146,24 @@
     </script>
     <!-- wedding song type End -->
 
-    <!-- Loading page begore show -->
+    <!-- Loading page before show -->
     <script>
         window.addEventListener('load', function () {
             // Page has fully loaded, remove the loading overlay
             document.getElementById('loading-overlay').style.display = 'none';
         });
     </script>
-    <!-- Loading page begore show -->
+    <!-- Loading page before show -->
+
+    
+    <!-- collapse content -->
+    <script>
+        function toggleCollapsible() {
+          var content = document.querySelector('.content');
+          content.classList.toggle('show');
+        }
+    </script>
+    <!-- collapse content -->
 
 </body>
 

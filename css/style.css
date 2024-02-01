@@ -9831,3 +9831,26 @@ a.text-dark:hover, a.text-dark:focus {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.collapsible {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  outline: none;
+  width: 100%;
+  transition: background-color 0.3s; /* Add transition effect to background-color */
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add transition effect to max-height and opacity */
+}
+
+.content.show {
+  max-height: 100%; /* Set the maximum height you want when content is visible */
+  opacity: 1;
+}
