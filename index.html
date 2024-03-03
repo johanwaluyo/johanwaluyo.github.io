@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Johan Waluyo & Eufira Khowinna - Wedding Day</title>
+    <title id="langTitle">Johan Waluyo & Eufira Khowinna - Wedding Day</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Wedding HTML Templates" name="keywords">
     <meta content="Wedding HTML Templates" name="description">
@@ -57,23 +57,23 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#story" class="nav-item nav-link">Story</a>
-                <a href="#gallery" class="nav-item nav-link">Gallery</a>
-                <a href="#event" class="nav-item nav-link">Events</a>
-                <a href="#family" class="nav-item nav-link">Family</a>
+                <a id="langHome" href="#home" class="nav-item nav-link active">Home</a>
+                <a id="langAbout" href="#about" class="nav-item nav-link">About</a>
+                <a id="langStory" href="#story" class="nav-item nav-link">Story</a>
+                <a id="langGallery" href="#gallery" class="nav-item nav-link">Gallery</a>
+                <a id="langEvents" href="#event" class="nav-item nav-link">Events</a>
+                <a id="langFamily" href="#family" class="nav-item nav-link">Family</a>
             </div>
             <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                 <h1 class="font-secondary text-white mb-n2">Johan Waluyo <span class="text-primary">&</span> Eufira Khowinna</h1>
             </a>
             <div class="navbar-nav mr-auto py-0">
-                <a href="#rsvp" class="nav-item nav-link">RSVP</a>
-                <a href="#ewallet" class="nav-item nav-link">E-Angpao</a>
-                <a href="#wish" class="nav-item nav-link">Wish</a>
-                <a href="#schedule" class="nav-item nav-link">Schedule</a>
-                <a href="#countDay" class="nav-item nav-link">CountDay</a>
-                <a href="#faq" class="nav-item nav-link">FAQ</a>
+                <a id="langRSVP" href="#rsvp" class="nav-item nav-link">RSVP</a>
+                <a id="langAngpao" href="#ewallet" class="nav-item nav-link">E-Angpao</a>
+                <a id="langWish" href="#wish" class="nav-item nav-link">Wish</a>
+                <a id="langSchedule" href="#schedule" class="nav-item nav-link">Schedule</a>
+                <a id="langCountDay" href="#countDay" class="nav-item nav-link">CountDay</a>
+                <a id="langFAQ" href="#faq" class="nav-item nav-link">FAQ</a>
             </div>
         </div>
     </nav>
@@ -641,6 +641,9 @@
     
     <!-- Play song -->
     <a class="btn btn-lg btn-outline-primary btn-lg-square toggleButton"><i class="fa fa-play"></i></a>
+    
+    <!-- Play song -->
+    <a class="btn btn-lg btn-outline-primary btn-lg-square toggleButtonLang"><i class="fa fa-language"></i></a>
 
     <!-- Welcome Popup -->
     <div id="welcomePopup">
@@ -1164,6 +1167,53 @@
         }
     </script>
     <!-- collapse content -->
+
+    <!-- Language start -->
+    <script>
+         // Reference to the play/pause button
+         var toggleButtonLang = document.querySelector(".toggleButtonLang");
+         toggleButtonLang.addEventListener("click", function () {
+            toggleLanguage();
+        });
+
+        function toggleLanguage() {
+            var currentLanguage = document.documentElement.lang;
+            if (currentLanguage === "id") {
+                // Change to English
+                document.getElementById("langTitle").innerText = "Johan Waluyo & Eufira Khowinna - Wedding Day";
+                document.getElementById("langHome").innerText = "Home";
+                document.getElementById("langAbout").innerText = "About";
+                document.getElementById("langStory").innerText = "Story";
+                document.getElementById("langGallery").innerText = "Gallery";
+                document.getElementById("langEvents").innerText = "Events";
+                document.getElementById("langFamily").innerText = "Family";
+                document.getElementById("langRSVP").innerText = "RSVP";
+                document.getElementById("langAngpao").innerText = "E-Angpao";
+                document.getElementById("langWish").innerText = "Wish";
+                document.getElementById("langSchedule").innerText = "Schedule";
+                document.getElementById("langCountDay").innerText = "CountDay";
+                document.getElementById("langFAQ").innerText = "FAQ";
+                document.documentElement.lang = "en";
+            } else {
+                // Change to Bahasa
+                document.getElementById("langTitle").innerText = "Johan Waluyo & Eufira Khowinna - Hari Pernikahan";
+                document.getElementById("langHome").innerText = "Beranda";
+                document.getElementById("langAbout").innerText = "Tentang Kami";
+                document.getElementById("langStory").innerText = "Cerita Kami";
+                document.getElementById("langGallery").innerText = "Galeri";
+                document.getElementById("langEvents").innerText = "Acara";
+                document.getElementById("langFamily").innerText = "Keluarga";
+                document.getElementById("langRSVP").innerText = "RSVP";
+                document.getElementById("langAngpao").innerText = "E-Angpao";
+                document.getElementById("langWish").innerText = "Ucapan";
+                document.getElementById("langSchedule").innerText = "Jadwal";
+                document.getElementById("langCountDay").innerText = "Hitungan Hari";
+                document.getElementById("langFAQ").innerText = "Pertanyaan Umum";
+                document.documentElement.lang = "id";
+            }
+        }
+    </script>
+    <!-- Language end -->
 
 </body>
 
