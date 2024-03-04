@@ -23,8 +23,9 @@
     '51': 'audio/wedding-korea.mp3',
     '52': 'audio/wedding-koreaold.mp3',
     '88': 'audio/wedding-viet.mp3'
-  #3 example url
-    https://www.johanwedseufira.online/?name=Johan%20Waluyo&type=11
-  #4 totalCarousel need to set as how many Carousel will have
-  #5 totalGallery need to set as how many Gallery will have
-  #6 need to modify pinterest https://www.pinterest.com/evengarnet2000/johanwedseufira2024/
+  #3 ?lang=... for language en/id
+  #4 example url
+    https://www.johanwedseufira.online/?name=Johan%20Waluyo&type=11&lang=id
+  #5 totalCarousel need to set as how many Carousel will have
+  #6 totalGallery need to set as how many Gallery will have
+  #7 need to modify pinterest https://www.pinterest.com/evengarnet2000/johanwedseufira2024/

@@ -1170,6 +1170,20 @@
 
     <!-- Language start -->
     <script>
+        
+        // Get the type parameter from the URL
+        const urlParam = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang');
+
+        loadLanguage();
+
+        function loadLanguage() {
+            document.documentElement.lang="'"+lang+"'";
+            toggleLanguage();
+            alert(document.documentElement.lang);
+        }
+
+
          // Reference to the play/pause button
          var toggleButtonLang = document.querySelector(".toggleButtonLang");
          toggleButtonLang.addEventListener("click", function () {
