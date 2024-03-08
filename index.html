@@ -262,7 +262,7 @@
     <div class="container-fluid py-5" id="event">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 id="langEvents" class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Event</h6>
+                <h6 id="langEvents2" class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Event</h6>
                 <h1 id="langOurWedding" class="font-secondary display-4">Our Wedding Event</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
@@ -334,7 +334,7 @@
                         <form method="post" action="" name="contact-form">
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <input type="text" name="your-name" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Name"/>
+                                    <input type="text" name="your-name" id="nameInput" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Name"/>
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <input type="email" name="your-email" id="emailInput" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Email"/>
@@ -362,7 +362,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Blessing Message" name="message" required="required"></textarea>
+                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" id="blessInput" placeholder="Blessing Message" name="message" required="required"></textarea>
                             </div>
                             <div>
                                 <button id="langSubmit" class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Submit</button>
@@ -386,7 +386,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
                     <h5 id="langThxMsg" class="font-weight-normal text-muted mb-3 pb-3">For all the best wishes</h5>
-                    <h4 class="font-weight-normal text-muted mb-3 pb-3">Press Button to show/hide E-Wallet <button onclick="toggleCollapsible()" class="btn btn-lg btn-outline-primary btn-lg-square"><i class="fas fa-wallet"></i></button></h4>
+                    <h4 class="font-weight-normal text-muted mb-3 pb-3"><div id="ewalletbutton">Press Button to show/hide E-Wallet </div> <button onclick="toggleCollapsible()" class="btn btn-lg btn-outline-primary btn-lg-square"><i class="fas fa-wallet"></i></button></h4>
                 </div>
             </div>
             <div class="content">
@@ -437,8 +437,8 @@
     <div class="container-fluid py-5" id="wish">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Wishes</h6>
-                <h1 class="font-secondary display-4">Bless From Relatives/Friends</h1>
+                <h6 id="langWish2" class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Wishes</h6>
+                <h1 id="blessFrom" class="font-secondary display-4">Bless From Relatives/Friends</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="row justify-content-center">
@@ -461,8 +461,8 @@
     <div class="container-fluid py-5" id="schedule">
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Schedule</h6>
-                <h1 class="font-secondary display-4">Schedule of Events</h1>
+                <h6 id="langSchedule2" class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Schedule</h6>
+                <h1 id="langScheduleEvent" class="font-secondary display-4">Schedule of Events</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="container timeline position-relative p-0">
@@ -541,12 +541,12 @@
     <div class="container-fluid py-5" id="countDay">
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Count Down</h6>
+                <h6 id="langCountDay2" class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Count Down</h6>
                 <h1 class="font-secondary display-4" id="countDown"></h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
-                <h4 class="mb-2">Copy Our Wedding Hash Tag <button onclick="copyToClipboard()" class="btn btn-lg btn-outline-primary btn-lg-square"><i class="far fa-copy"></i></button></h4> 
+                <div><h4 class="mb-2"><div id="langCopy">Copy Our Wedding Hash Tag <div> </h4> <button onclick="copyToClipboard()" class="btn btn-lg btn-outline-primary btn-lg-square"><i class="far fa-copy"></i></button> </div>
                 <p class="font-primary text-primary" id="copyText">
                     #JohanWedsEufira2024 #JohanAndEufiraWedding #CongratsToJohanAndEufira #JohanAndEufiraSayIDo
                     #CountOnJohanAndEufira #FinallyFoundAJohan #FinallyFoundAEufira #JohanEufiraNewlywed #weddingDay22Sept2024
@@ -562,7 +562,7 @@
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">FAQ</h6>
-                <h1 class="font-secondary display-4" >Frequently Asked Questions</h1>
+                <h1 id="langFAQ2" class="font-secondary display-4" >Frequently Asked Questions</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
@@ -593,8 +593,8 @@
     <div class="container-fluid py-5" id="album">
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Album</h6>
-                <h1 class="font-secondary display-4" >Our Story Footage</h1>
+                <h6 id="langAlbum" class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Album</h6>
+                <h1 id="langAlbum2" class="font-secondary display-4" >Our Story Footage</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="row justify-content-center">
@@ -1204,14 +1204,20 @@
                 document.getElementById("langStory").innerText = "Story";
                 document.getElementById("langGallery").innerText = "Gallery";
                 document.getElementById("langEvents").innerText = "Events";
+                document.getElementById("langEvents2").innerText = "Events";
                 document.getElementById("langFamily").innerText = "Family";
                 document.getElementById("langRSVP").innerText = "RSVP";
                 document.getElementById("langAngpao").innerText = "E-Angpao";
                 document.getElementById("langWish").innerText = "Wish";
+                document.getElementById("langWish2").innerText = "Wishes";
                 document.getElementById("langSchedule").innerText = "Schedule";
+                document.getElementById("langSchedule2").innerText = "Schedule";
+                document.getElementById("langScheduleEvent").innerText = "Schedule of Events";
                 document.getElementById("langCountDay").innerText = "CountDay";
+                document.getElementById("langCountDay2").innerText = "CountDay";  
+                document.getElementById("langCopy").innerText = "Copy Our Wedding Hash Tag";                               
                 document.getElementById("langFAQ").innerText = "FAQ";
-
+                document.getElementById("langFAQ2").innerText = "Frequently Asked Questions";
                 document.getElementById("langAboutHeader").innerText = "Groom & Bride";
                 document.getElementById("langGroom").innerText = "The Groom";
                 document.getElementById("langBride").innerText = "The Bride";
@@ -1235,6 +1241,11 @@
                 document.getElementById("langFamilyGroomMsg").innerText = "Groom Family";
                 document.getElementById("langFamilyBrideMsg").innerText = "Bride Family";
 
+                document.getElementById("nameInput").placeholder = "Your Name";
+                document.getElementById("emailInput").placeholder = "Your Email";
+                document.getElementById("blessInput").placeholder = "Blessing Message";
+
+                document.getElementById("ewalletbutton").innerText = "Press Button to show/hide E-Wallet";
                 
                 document.getElementById("langJoinOurParty").innerText = "Join Our Party";
                 document.getElementById("langNOG").innerText = "Number of Guest";
@@ -1246,6 +1257,12 @@
                 document.getElementById("langThx").innerText = "Thank you";
                 document.getElementById("langThxMsg").innerText = "For all the best wishes";
                 document.getElementById("langThxFooter").innerText = "Thank you";
+                
+                document.getElementById("blessFrom").innerText = "Bless From Relatives/Friends";
+                document.getElementById("langAlbum").innerText = "Album";
+                document.getElementById("langAlbum2").innerText = "Our Story Footage";
+                
+                
                 
                 document.documentElement.lang = "en";
             } else {
@@ -1261,13 +1278,20 @@
                 document.getElementById("langStory").innerText = "Cerita Kami";
                 document.getElementById("langGallery").innerText = "Galeri";
                 document.getElementById("langEvents").innerText = "Acara";
+                document.getElementById("langEvents2").innerText = "Acara";
                 document.getElementById("langFamily").innerText = "Keluarga";
                 document.getElementById("langRSVP").innerText = "RSVP";
                 document.getElementById("langAngpao").innerText = "E-Angpao";
                 document.getElementById("langWish").innerText = "Ucapan";
+                document.getElementById("langWish2").innerText = "Ucapan";
                 document.getElementById("langSchedule").innerText = "Jadwal";
+                document.getElementById("langSchedule2").innerText = "Jadwal";
+                document.getElementById("langScheduleEvent").innerText = "Jadwal acara";
                 document.getElementById("langCountDay").innerText = "Hitungan Hari";
+                document.getElementById("langCountDay2").innerText = "Hitungan Hari"; 
+                document.getElementById("langCopy").innerText = "Salin Hash Tag Pernikahan Kami";   
                 document.getElementById("langFAQ").innerText = "Pertanyaan Umum";
+                document.getElementById("langFAQ2").innerText = "Pertanyaan yang Sering Diajukan";
 
                 document.getElementById("langAboutHeader").innerText = "Pengantin Pria & Pengantin Wanita";
                 document.getElementById("langGroom").innerText = "Pengantin pria";
@@ -1291,6 +1315,12 @@
                 document.getElementById("langFamilyMemberMsg").innerText = "Anggota keluarga";
                 document.getElementById("langFamilyGroomMsg").innerText = "Keluarga Pengantin Pria";
                 document.getElementById("langFamilyBrideMsg").innerText = "Keluarga Pengantin";
+                
+                document.getElementById("nameInput").placeholder = "Nama";
+                document.getElementById("emailInput").placeholder = "Alamat Email";
+                document.getElementById("blessInput").placeholder = "Ucapan Selamat";
+                
+                document.getElementById("ewalletbutton").innerText = "Tekan Tombol untuk menampilkan/menyembunyikan E-Wallet";
 
                 document.getElementById("langJoinOurParty").innerText = "Bergabung Pesta Kami";
                 document.getElementById("langNOG").innerText = "Jumlah Tamu";
@@ -1302,6 +1332,12 @@
                 document.getElementById("langThx").innerText = "Terima kasih";
                 document.getElementById("langThxMsg").innerText = "Untuk semua harapan terbaik";
                 document.getElementById("langThxFooter").innerText = "Terima kasih";
+
+                document.getElementById("blessFrom").innerText = "Berkat Dari Kerabat/Teman";
+                
+                document.getElementById("langAlbum").innerText = "Album";
+                document.getElementById("langAlbum2").innerText = "Rekaman Kisah Kami";
+
                 document.documentElement.lang = "id";
             }
         }
