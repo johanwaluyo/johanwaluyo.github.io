@@ -35,56 +35,6 @@
     </script>
     <script type="text/javascript" async defer src="https://assets.pinterest.com/js/pinit.js">
     </script>
-
-    
-    <!-- Welcome Popup Message Start -->
-    <script>
-        // Function to get URL parameters
-        function getParameterByName(name, url) {
-          if (!url) url = window.location.href;
-          name = name.replace(/[\[\]]/g, '\\$&');
-          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-              results = regex.exec(url);
-          if (!results) return null;
-          if (!results[2]) return '';
-          return decodeURIComponent(results[2].replace(/\+/g, ' '));
-        }
-        // Function to display the welcome popup
-        function showWelcomePopup() {
-          var name = getParameterByName('name');
-          if (name) {
-            document.getElementById('namePlaceholder').textContent = name;
-            document.getElementById('welcomePopup').style.display = 'block';
-            // Automatically close the popup after 8 seconds
-            //setTimeout(closePopup, 8000);
-
-          }
-        }
-
-        let count = 0;
-        // Add event listener to close the welcome popup when clicking outside
-        document.addEventListener('click', function (e) {
-            if(count==0){ // only once
-                if (!document.getElementById('welcomePopup').contains(e.target)) {
-                    closePopup();
-                }
-            }            
-        });
-        
-      
-        // Function to close the popup
-        function closePopup() {
-            count++;
-            document.getElementById('welcomePopup').style.display = 'none';
-            toggleMusic();
-        }
-      
-        // Call the function when the window has finished loading
-        // window.onload = showWelcomePopup;
-        showWelcomePopup();
-    </script>
-    <!-- Welcome Popup Message End -->
-
     
 </head>
 
@@ -997,6 +947,56 @@
             toggleButton.innerHTML = '<i class="fa fa-play"></i>';
         }
     </script>
+
+    
+    
+    <!-- Welcome Popup Message Start -->
+    <script>
+        // Function to get URL parameters
+        function getParameterByName(name, url) {
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, '\\$&');
+          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+        // Function to display the welcome popup
+        function showWelcomePopup() {
+          var name = getParameterByName('name');
+          if (name) {
+            document.getElementById('namePlaceholder').textContent = name;
+            document.getElementById('welcomePopup').style.display = 'block';
+            // Automatically close the popup after 8 seconds
+            //setTimeout(closePopup, 8000);
+
+          }
+        }
+
+        let count = 0;
+        // Add event listener to close the welcome popup when clicking outside
+        document.addEventListener('click', function (e) {
+            if(count==0){ // only once
+                if (!document.getElementById('welcomePopup').contains(e.target)) {
+                    closePopup();
+                }
+            }            
+        });
+        
+      
+        // Function to close the popup
+        function closePopup() {
+            count++;
+            document.getElementById('welcomePopup').style.display = 'none';
+            toggleMusic();
+        }
+      
+        // Call the function when the window has finished loading
+        // window.onload = showWelcomePopup;
+        showWelcomePopup();
+    </script>
+    <!-- Welcome Popup Message End -->
 
     <!-- Process submit reservation -->
     <script>
