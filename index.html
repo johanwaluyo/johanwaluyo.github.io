@@ -110,7 +110,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" onclick="playMusic()" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>        
                     <!-- 16:9 aspect ratio -->
@@ -783,76 +783,6 @@
         }
     </script>
 
-    <!-- Loop dynamicCarousel Javascript -->
-    <script>
-        // Declare variables at the top
-        const imgPaths1 = [];
-        let totalCarousel = 5; // Set the total number of carousel images
-
-        // Use variables in the rest of your script
-        for (let i = 1; i <= totalCarousel; i++) {
-            const imagePath = `img/carousel/carousel-${i}.jpg`;
-            imgPaths1.push(imagePath);
-        }
-
-        console.log(imgPaths1);
-        
-    
-        // Get the container
-        const carouselContainer = document.getElementById("dynamicCarousel");
-    
-        // Loop through the array and create carousel items
-        for (let i = 0; i < imgPaths1.length; i++) {
-            const carouselItem = document.createElement("div");
-            carouselItem.className = `carousel-item position-relative ${i === 0 ? 'active' : ''}`;
-            carouselItem.style = "height: 100vh; min-height: 400px;";
-    
-            const img = document.createElement("img");
-            img.className = "position-absolute w-100 h-100";
-            img.src = imgPaths1[i];
-            img.style = "object-fit: cover;";
-    
-            const caption = document.createElement("div");
-            caption.className = "carousel-caption d-flex flex-column align-items-center justify-content-center";
-    
-            const content = document.createElement("div");
-            content.className = "p-3";
-            content.style = "max-width: 900px;";
-    
-            const title = document.createElement("h1");
-            title.className = "display-1 font-secondary text-white mt-n3 mb-md-4";
-            title.textContent = "Johan Waluyo & Eufira Khowinna";
-    
-            const description = document.createElement("div");
-            description.className = "d-inline-block border-top border-bottom border-light py-3 px-4";
-    
-            const descriptionText = document.createElement("h3");
-            descriptionText.className = "langGettingMarried text-uppercase font-weight-normal text-white m-0";
-            descriptionText.style = "letter-spacing: 2px;";
-            descriptionText.textContent = "We're getting married";
-    
-            const button = document.createElement("button");
-            button.type = "button";
-            button.className = "btn-play mx-auto";
-            button.setAttribute("data-toggle", "modal");
-            button.setAttribute("data-src", "audio/proposal.mp4");
-            button.setAttribute("data-target", "#videoModal");
-    
-            const span = document.createElement("span");
-    
-            // Append elements to the container
-            description.appendChild(descriptionText);
-            content.appendChild(title);
-            content.appendChild(description);
-            button.appendChild(span);
-            content.appendChild(button);
-            caption.appendChild(content);
-            carouselItem.appendChild(img);
-            carouselItem.appendChild(caption);
-            carouselContainer.appendChild(carouselItem);
-        }
-    </script>
-
 
     <!-- Loop gallery Javascript -->
     <script>
@@ -946,6 +876,79 @@
             toggleButton.innerHTML = '<i class="fa fa-play"></i>';
         }
     </script>
+
+    
+    <!-- Loop dynamicCarousel Javascript -->
+    <script>
+        // Declare variables at the top
+        const imgPaths1 = [];
+        let totalCarousel = 5; // Set the total number of carousel images
+
+        // Use variables in the rest of your script
+        for (let i = 1; i <= totalCarousel; i++) {
+            const imagePath = `img/carousel/carousel-${i}.jpg`;
+            imgPaths1.push(imagePath);
+        }
+
+        console.log(imgPaths1);
+        
+    
+        // Get the container
+        const carouselContainer = document.getElementById("dynamicCarousel");
+    
+        // Loop through the array and create carousel items
+        for (let i = 0; i < imgPaths1.length; i++) {
+            const carouselItem = document.createElement("div");
+            carouselItem.className = `carousel-item position-relative ${i === 0 ? 'active' : ''}`;
+            carouselItem.style = "height: 100vh; min-height: 400px;";
+    
+            const img = document.createElement("img");
+            img.className = "position-absolute w-100 h-100";
+            img.src = imgPaths1[i];
+            img.style = "object-fit: cover;";
+    
+            const caption = document.createElement("div");
+            caption.className = "carousel-caption d-flex flex-column align-items-center justify-content-center";
+    
+            const content = document.createElement("div");
+            content.className = "p-3";
+            content.style = "max-width: 900px;";
+    
+            const title = document.createElement("h1");
+            title.className = "display-1 font-secondary text-white mt-n3 mb-md-4";
+            title.textContent = "Johan Waluyo & Eufira Khowinna";
+    
+            const description = document.createElement("div");
+            description.className = "d-inline-block border-top border-bottom border-light py-3 px-4";
+    
+            const descriptionText = document.createElement("h3");
+            descriptionText.className = "langGettingMarried text-uppercase font-weight-normal text-white m-0";
+            descriptionText.style = "letter-spacing: 2px;";
+            descriptionText.textContent = "We're getting married";
+    
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "btn-play mx-auto";
+            button.onclick = pauseMusic;
+            button.setAttribute("data-toggle", "modal");
+            button.setAttribute("data-src", "audio/proposal.mp4");
+            button.setAttribute("data-target", "#videoModal");
+    
+            const span = document.createElement("span");
+    
+            // Append elements to the container
+            description.appendChild(descriptionText);
+            content.appendChild(title);
+            content.appendChild(description);
+            button.appendChild(span);
+            content.appendChild(button);
+            caption.appendChild(content);
+            carouselItem.appendChild(img);
+            carouselItem.appendChild(caption);
+            carouselContainer.appendChild(carouselItem);
+        }
+    </script>
+
 
     <!-- Process submit reservation -->
     <script>
