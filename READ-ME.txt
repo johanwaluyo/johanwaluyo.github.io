@@ -15,14 +15,14 @@
   => Johan Notes for wedding website
   #1 Name for invite ?name=....
   #2 List of Music type &type=...
-    '11': 'audio/wedding-chinese.mp3',
-    '12': 'audio/wedding-chineseold.mp3',
-    '21': 'audio/wedding-english.mp3',
-    '22': 'audio/wedding-englishold.mp3',
-    '31': 'audio/wedding-indo.mp3',
-    '51': 'audio/wedding-korea.mp3',
-    '52': 'audio/wedding-koreaold.mp3',
-    '88': 'audio/wedding-viet.mp3'
+    '11': 'audio/wedding-chinese.mp3', (Marry Me Today)
+    '12': 'audio/wedding-chineseold.mp3', (Xin Hun Kuai Le)
+    '21': 'audio/wedding-english.mp3', (Nothing gonna change my love for you)
+    '22': 'audio/wedding-englishold.mp3', (beautiful in white)
+    '31': 'audio/wedding-indo.mp3', (Cinta Luar Biasa)
+    '51': 'audio/wedding-korea.mp3', (My Love)
+    '52': 'audio/wedding-koreaold.mp3', (Wedding Dress)
+    '88': 'audio/wedding-viet.mp3' (I Do Love You)
   #3 ?lang=... for language en/id
   #4 example url
     https://www.johanwedseufira.online/?name=Johan%20Waluyo&type=11&lang=id
