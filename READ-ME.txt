@@ -29,3 +29,4 @@
   #5 totalCarousel need to set as how many Carousel will have
   #6 totalGallery need to set as how many Gallery will have
   #7 need to modify pinterest https://www.pinterest.com/evengarnet2000/johanwedseufira2024/
+  #8 Hold my Hand - lady gaga video song
