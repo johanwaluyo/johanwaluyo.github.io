@@ -34,8 +34,8 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js">
     </script>
     <script type="text/javascript" async defer src="https://assets.pinterest.com/js/pinit.js">
-    </script>
-
+    </script>    
+    <script src="js/lazysizes.min.js"></script>
     
 </head>
 
@@ -146,12 +146,12 @@
                     </div>
                 </div>
                 <div class="col-md-6 p-0" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/about-1.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100 lazyload" src="img/about-1.jpg" style="object-fit: cover;">
                 </div>
             </div>
             <div class="row m-0">
                 <div class="col-md-6 p-0" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/about-2.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100 lazyload" src="img/about-2.jpg" style="object-fit: cover;">
                 </div>
                 <div class="col-md-6 p-0 text-center text-md-left">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
@@ -181,7 +181,7 @@
             <div class="container timeline position-relative p-0">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-right">
-                        <img class="img-fluid mr-md-3" src="img/story-1.jpg" alt="">
+                        <img class="img-fluid mr-md-3 lazyload" src="img/story-1.jpg" alt="">
                     </div>
                     <div class="col-md-6 text-center text-md-left">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
@@ -200,12 +200,12 @@
                         </div>
                     </div>
                     <div class="col-md-6 text-center text-md-left">
-                        <img class="img-fluid ml-md-3" src="img/story-2.jpg" alt="">
+                        <img class="img-fluid ml-md-3 lazyload" src="img/story-2.jpg" alt="">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-center text-md-right">
-                        <img class="img-fluid mr-md-3" src="img/story-3.jpg" alt="">
+                        <img class="img-fluid mr-md-3 lazyload" src="img/story-3.jpg" alt="">
                     </div>
                     <div class="col-md-6 text-center text-md-left">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
@@ -224,7 +224,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 text-center text-md-left">
-                        <img class="img-fluid ml-md-3" src="img/story-4.jpg" alt="">
+                        <img class="img-fluid ml-md-3 lazyload" src="img/story-4.jpg" alt="">
                     </div>
                 </div>
                 <!-- <div class="row">
@@ -274,7 +274,7 @@
             <div class="row">
                 <div class="col-md-6 border-right border-primary">
                     <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                        <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
+                        <img class="img-fluid mb-4 lazyload" src="img/event-1.jpg" alt="">
                         <h4 id="langWeddingRecMsg" class="mb-3">Wedding Ceremonial</h4>
                         <p class="mb-2">Temple, Vihara Buddha Diepa, Jl. Kp. Melayu, Tj. Balai Karimun, Kec. Karimun, Kabupaten Karimun, Kepulauan Riau 29661, Indonesia</p>
                         <p class="mb-0">11:00 - 13:00</p>
@@ -285,7 +285,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
-                        <img class="img-fluid mb-4" src="img/event-2.jpg" alt="">
+                        <img class="img-fluid mb-4 lazyload" src="img/event-2.jpg" alt="">
                         <h4 id="langWeddingParty" class="mb-3">Wedding Party</h4>
                         <p class="mb-2">Home, jl.pertambangan simpang pelipit No.149, Tj. Balai Karimun, Kec. Karimun, Kabupaten Karimun, Kepulauan Riau 29661, Indonesia</p>
                         <p class="mb-0">17:00 - 23:00</p>
@@ -398,7 +398,7 @@
                     <div class="col-md-6 border-right border-primary">
                         <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
                             <a download="johan-maybank.jpg" href="img/ewallet-1.jpg" title="johan-maybank" target="_blank">
-                                <img class="img-fluid rounded" style="width: 50%; height: 50%;" src="img/ewallet-1.jpg" alt="">
+                                <img class="img-fluid rounded lazyload" style="width: 50%; height: 50%;" src="img/ewallet-1.jpg" alt="">
                             </a>
                             <h4 class="mb-3">Maybank</h4> <div class="d-none" id="maybank">114254235994</div><button onclick="copyToClipboard('maybank')" class="btn btn-lg btn-outline-primary btn-lg-square"><i class="far fa-copy"></i></button>
                             <p class="mb-2">Account no : 1142 5423 5994</p>
@@ -407,7 +407,7 @@
                     <div class="col-md-6">
                         <div class="text-center text-md-left ml-md-3">
                             <a download="johan-tng.jpg" href="img/ewallet-2.jpg" title="johan-tng" target="_blank">
-                                <img class="img-fluid rounded" style="width: 50%; height: 50%;" src="img/ewallet-2.jpg" alt="">
+                                <img class="img-fluid rounded lazyload" style="width: 50%; height: 50%;" src="img/ewallet-2.jpg" alt="">
                             </a>
                             <h4 class="mb-3">TnG</h4> <div class="d-none" id="tng">181437856878</div><button onclick="copyToClipboard('tng')" class="btn btn-lg btn-outline-primary btn-lg-square"><i class="far fa-copy"></i></button>
                             <p class="mb-2">Duitnow Id : 1814 3785 6878</p>
@@ -418,14 +418,14 @@
                 <div class="row">
                     <div class="col-md-6 border-right border-primary">
                         <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                            <img class="img-fluid rounded" style="width: 100px; height: 100px;" src="img/ewallet-3.png" alt="">
+                            <img class="img-fluid rounded lazyload" style="width: 100px; height: 100px;" src="img/ewallet-3.png" alt="">
                             <h4 class="mb-3">BCA</h4> <div class="d-none" id="bca">5271072792</div><button onclick="copyToClipboard('bca')" class="btn btn-lg btn-outline-primary btn-lg-square"><i class="far fa-copy"></i></button>
                             <p class="mb-2">Account no : 527 107 2792</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="text-center text-md-left ml-md-3">
-                            <img class="img-fluid rounded" style="width: 150px; height: 100px;" src="img/ewallet-4.jpg" alt="">
+                            <img class="img-fluid rounded lazyload" style="width: 150px; height: 100px;" src="img/ewallet-4.jpg" alt="">
                             <h4 class="mb-3">GoPay</h4> <div class="d-none" id="gopay">70001085668103968</div><button onclick="copyToClipboard('gopay')" class="btn btn-lg btn-outline-primary btn-lg-square"><i class="far fa-copy"></i></button>
                             <p class="mb-2">Virtual Account : 70001085668103968</p>
                         </div>
@@ -764,7 +764,7 @@
             positionRelative.className = "position-relative mb-2";
 
             const img = document.createElement("img");
-            img.className = "img-fluid w-100";
+            img.className = "img-fluid w-100 lazyload";
             img.src = member.image;
             img.alt = "";
 
@@ -812,7 +812,7 @@
             galleryItem.className = "gallery-item";
     
             const img = document.createElement("img");
-            img.className = "img-fluid w-100";
+            img.className = "img-fluid w-100 lazyload";
             img.src = imgPaths2[i];
             img.alt = "";
     
@@ -908,7 +908,7 @@
             carouselItem.style = "height: 100vh; min-height: 400px;";
     
             const img = document.createElement("img");
-            img.className = "position-absolute w-100 h-100";
+            img.className = "position-absolute w-100 h-100 lazyload";
             img.src = imgPaths1[i];
             img.style = "object-fit: cover;";
     
@@ -933,7 +933,7 @@
     
             const button = document.createElement("button");
             button.type = "button";
-            button.className = "btn-play mx-auto";
+            button.className = "btn-play mx-auto lazyload";
             button.onclick = pauseMusic;
             button.setAttribute("data-toggle", "modal");
             button.setAttribute("data-src", "audio/proposal.mp4");
