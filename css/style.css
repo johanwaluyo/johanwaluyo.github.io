@@ -9810,7 +9810,7 @@ a.text-dark:hover, a.text-dark:focus {
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 1040;
 }
 
 
